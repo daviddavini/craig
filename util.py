@@ -19,12 +19,15 @@ import scipy.spatial
 from multiprocessing.dummy import Pool as ThreadPool
 from itertools import repeat
 import sklearn
+#### FIXME: CHANGES
+import sklearn.metrics
 
 # from lazy_greedy import FacilityLocation, lazy_greedy, lazy_greedy_heap
 # from set_cover import SetCover
 
-from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
-from tensorflow.examples.tutorials.mnist import input_data
+#### FIXME: CHANGES
+#from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
+#from tensorflow.examples.tutorials.mnist import input_data
 
 SEED = 100
 EPS = 1E-8

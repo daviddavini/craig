@@ -1,0 +1,38 @@
+What I've tried:
+
+python3.8
+    - no module named 'tensorflow.contrib'
+    - tensorflow 
+    - https://stackoverflow.com/questions/59843037/no-module-named-tensorflow-contrib
+    - https://stackoverflow.com/questions/58347171/no-module-named-tensorflow-contrib-while-importing-tflearn
+
+python3.7
+    - no module named 'tensorflow.contrib'
+
+python3.6 requirements.txt
+    - numpy-1.20.2 python >=3.7 required
+
+python3.7 requirements.txt
+    ERROR: Could not find a version that satisfies the requirement tensorflow-gpu==1.14.0 (from -r requirements.txt (line 36)) (from versions: none)
+    ERROR: No matching distribution found for tensorflow-gpu==1.14.0 (from -r requirements.txt (line 36))
+
+python3.7 requirements_edited.txt (no tensorflow-gpu)
+In file included from src/cpp/cuda.cpp:4:
+    src/cpp/cuda.hpp:14:10: fatal error: 'cuda.h' file not found
+    #include <cuda.h>
+             ^~~~~~~~
+    1 error generated.
+    error: command 'gcc' failed with exit status 1
+    ----------------------------------------
+    ERROR: Command errored out with exit status 1: '/Users/daviddavini/Code/BigML Code/craig/venv/bin/python3.7' -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/tn/pz0tvrd13xn5dvwgsxc9zsdh0000gn/T/pip-install-kus1k72n/pycuda/setup.py'"'"'; __file__='"'"'/private/var/folders/tn/pz0tvrd13xn5dvwgsxc9zsdh0000gn/T/pip-install-kus1k72n/pycuda/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var/folders/tn/pz0tvrd13xn5dvwgsxc9zsdh0000gn/T/pip-record-c3bp258h/install-record.txt --single-version-externally-managed --compile --install-headers '/Users/daviddavini/Code/BigML Code/craig/venv/include/site/python3.7/pycuda' Check the logs for full command output.
+
+python3.7 requirements_edited.txt (no tensorflow-gpu or tensorflow-estimator)
+    - same error
+
+python3.7 requirements_edited.txt (no wrapt, tensorflow-gpu, tensorflow-estimator)
+    - same error
+
+python3.6 blind install from scratch (as they arise)
+    - first error (cause I have tensorflow 2)
+    - reinstalling tensorflow 1.14
+    - new error... 'Keras requires TensorFlow 2.2 or higher. '
