@@ -36,3 +36,11 @@ python3.6 blind install from scratch (as they arise)
     - first error (cause I have tensorflow 2)
     - reinstalling tensorflow 1.14
     - new error... 'Keras requires TensorFlow 2.2 or higher. '
+
+I decided to just edit some of the imports
+I'm not sure how keras and tensorflow=1.14 is even possible
+
+Changes:
+- commented out tensorflow imports in util.py
+- changed sklearn import in util.py
+- changed resnet import in train_resnet.py
